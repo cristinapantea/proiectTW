@@ -1,0 +1,257 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<title>Movie Rental</title>
+</head>
+<body style="background-color:#000543;">
+
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: right;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+</style>
+<body>
+  <script>
+    document.getElementById("filme").onclick = function () {
+        location.href = "www.yoursite.com";
+    };
+    function filme() {
+      router.get("/", (req, res) => {
+    res.render("filme");
+  });
+    }
+  </script>
+
+
+<ul>
+<li><a href="#Kidzone">Kid Zone</a></li>
+  <li><a href="#Whishlist">Wishlist</a></li>  
+<li><button id="filme">Filme</button></li>
+  <li><a href="seriale.html">Seriale</a></li>
+  <li><a href="index.html">Home</a></li>
+ <li><a href="signin.html">Sign In</a></li>
+</ul>
+
+
+
+<h1>This is a Heading</h1>
+<p>This is a paragraph.</p>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Movie Rental</title>
+</head>
+<body style="background-color:#0a0d38; font-family: sans-serif;color: white;">
+
+<style>
+     * {
+     box-sizing: border-box;
+  }
+     body, html {
+    top: 0;
+     margin: 0;
+     padding: 0;
+     border: 0;
+  }
+ul {
+
+  list-style-type: none;
+  margin: 0 px;
+  margin-top: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: right;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+.search-icon {
+    position: absolute;
+    top: 18px;
+    left: 8px;
+    width: 14px;
+  }
+
+  .clear-icon {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 10px;
+    cursor: pointer;
+    visibility: hidden;
+  }
+  .search {
+    border: 1px solid grey;
+    border-radius: 5px;
+    height: 20px;
+    width: 100%;
+    padding: 2px 23px 2px 30px;
+    outline: 0;
+    background-color: #f5f5f5;
+  }
+  .search:hover, .search:focus {
+    border: 1.5px solid #009688;
+    background-color: white;
+  }
+  .row {
+  display: flex;
+  width: 75%;
+}
+
+.column {
+  flex: 50%;
+  padding: 3px;
+}
+.table {
+  width: 25%;
+}
+.rowstyle {
+  width: 100%;
+}
+@keyframes zoom-in-zoom-out {
+0% {
+transform: scale(1, 1);
+}
+50% {
+transform: scale(1.5, 1.5);
+}
+100% {
+transform: scale(1, 1);
+}
+}
+
+</style>
+<body>
+<script>
+   const clearIcon = document.querySelector(".clear-icon");
+  const searchBar = document.querySelector(".search");
+
+  searchBar.addEventListener("keyup", () => {
+    if(searchBar.value && clearIcon.style.visibility != "visible"){
+      clearIcon.style.visibility = "visible";
+    } else if(!searchBar.value) {
+      clearIcon.style.visibility = "hidden";
+    }
+  });
+
+  clearIcon.addEventListener("click", () => {
+    searchBar.value = "";
+    clearIcon.style.visibility = "hidden";
+  })
+</script>
+
+<ul> 
+<li style="float: left; width: 20%; height: 25%;margin-top: 15px;"><div class="wrapper" >
+  <img class="search-icon" src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDU2Ljk2NiA1Ni45NjYiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDU2Ljk2NiA1Ni45NjY7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ij4KPHBhdGggZD0iTTU1LjE0Niw1MS44ODdMNDEuNTg4LDM3Ljc4NmMzLjQ4Ni00LjE0NCw1LjM5Ni05LjM1OCw1LjM5Ni0xNC43ODZjMC0xMi42ODItMTAuMzE4LTIzLTIzLTIzcy0yMywxMC4zMTgtMjMsMjMgIHMxMC4zMTgsMjMsMjMsMjNjNC43NjEsMCw5LjI5OC0xLjQzNiwxMy4xNzctNC4xNjJsMTMuNjYxLDE0LjIwOGMwLjU3MSwwLjU5MywxLjMzOSwwLjkyLDIuMTYyLDAuOTIgIGMwLjc3OSwwLDEuNTE4LTAuMjk3LDIuMDc5LTAuODM3QzU2LjI1NSw1NC45ODIsNTYuMjkzLDUzLjA4LDU1LjE0Niw1MS44ODd6IE0yMy45ODQsNmM5LjM3NCwwLDE3LDcuNjI2LDE3LDE3cy03LjYyNiwxNy0xNywxNyAgcy0xNy03LjYyNi0xNy0xN1MxNC42MSw2LDIzLjk4NCw2eiIgZmlsbD0iIzAwMDAwMCIvPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K" />
+  <input class="search" placeholder="Search..." type="text" >
+  <img class="clear-icon" src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUxLjk3NiA1MS45NzYiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxLjk3NiA1MS45NzY7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ij4KPGc+Cgk8cGF0aCBkPSJNNDQuMzczLDcuNjAzYy0xMC4xMzctMTAuMTM3LTI2LjYzMi0xMC4xMzgtMzYuNzcsMGMtMTAuMTM4LDEwLjEzOC0xMC4xMzcsMjYuNjMyLDAsMzYuNzdzMjYuNjMyLDEwLjEzOCwzNi43NywwICAgQzU0LjUxLDM0LjIzNSw1NC41MSwxNy43NCw0NC4zNzMsNy42MDN6IE0zNi4yNDEsMzYuMjQxYy0wLjc4MSwwLjc4MS0yLjA0NywwLjc4MS0yLjgyOCwwbC03LjQyNS03LjQyNWwtNy43NzgsNy43NzggICBjLTAuNzgxLDAuNzgxLTIuMDQ3LDAuNzgxLTIuODI4LDBjLTAuNzgxLTAuNzgxLTAuNzgxLTIuMDQ3LDAtMi44MjhsNy43NzgtNy43NzhsLTcuNDI1LTcuNDI1Yy0wLjc4MS0wLjc4MS0wLjc4MS0yLjA0OCwwLTIuODI4ICAgYzAuNzgxLTAuNzgxLDIuMDQ3LTAuNzgxLDIuODI4LDBsNy40MjUsNy40MjVsNy4wNzEtNy4wNzFjMC43ODEtMC43ODEsMi4wNDctMC43ODEsMi44MjgsMGMwLjc4MSwwLjc4MSwwLjc4MSwyLjA0NywwLDIuODI4ICAgbC03LjA3MSw3LjA3MWw3LjQyNSw3LjQyNUMzNy4wMjIsMzQuMTk0LDM3LjAyMiwzNS40NiwzNi4yNDEsMzYuMjQxeiIgZmlsbD0iIzAwMDAwMCIvPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=" />
+</div> </li> 
+<li><a href="kidzone.html">Kid Zone</a></li>
+  <li><a href="wishlist.html">Wishlist</a></li>  
+<li><a href="filme.html">Filme</a></li>
+  <li><a href="seriale.html">Seriale</a></li>
+  <li><a href="index.html">Pagina principală</a></li>
+ <li><a href="signin.html">Log In</a></li>
+</ul>
+
+<!-- <h1>Alege filmul sau serialul pe gustul tau!</h1> -->
+<h1> Home</h1>
+<p style="text-indent:1.5%"> <b> Populare în categoria Dragoste</b></p>
+  <div class="table">
+    <div class="row">
+      <div class="column">
+        <div class="zoom-in-zoom-out">
+          <a href="filme.html"><img src= "jurnalul.jpg" alt="poza" style="width:300px;height:150px; object-fit: cover;"> </a>
+        </div>
+      </div>
+      <div class="column">
+        <a href="seriale.html"><img src= "virginriver.jpg" alt="poza" style="width:300px;height:150px; object-fit: cover;"> </a>
+      </div>
+</div>
+
+  <p style="text-indent:5%"> <b> Populare în categoria Actiune</b></p>
+  <div class="table">
+    <div class="row">
+      <div class="column">
+        <a href="filme.html"><img src= "fastandfurios.jpg" alt="poza" style="width:300px;height:150px; object-fit: cover;"> </a>
+      </div>
+      <div class="column">
+        <a href="seriale.html"><img src= "matt.jpg" alt="poza" style="width:300px;height:150px; object-fit: cover;"> </a>
+      </div>
+      <div class="column">
+        <a href="filme.html"><img src= "jumanji.jpg" alt="poza" style="width:300px;height:150px; object-fit: cover;"> </a>
+      </div>
+      <div class="column">
+        <a href="seriale.html"><img src= "vikings.jpg" alt="poza" style="width:300px;height:150px; object-fit: cover;"> </a>
+      </div>
+  </div>
+
+  <!-- <div class="row">
+        <p>Vrei sa vezi un film romantic? Atunci <b>The Notebook</b> este pentru tine, un film clasic, romantic dar si dramatic 
+          care cu siguranta o sa iti ajunga la inima!Click pe imagine pentru a urmarii povestea lui Allie Hamilton și Noah Calhoun. </p>
+          <p style="color: powderblue;"> hbdgvgdgvfghdgbgggcfdghfvgfdgfdg </p>
+          <p> Ai putin timp la dispozitie? Iti recomandam serialul <b>Virgin River</b> care prezinta povestea povestea de 
+            dragoste a unei noi infirmiere venite in oras si a unui burlac care nu vrea sa fie intr-o relatie!</p>
+  </div> -->
+
+<!-- <div class="table">
+  <div class="row">
+    <div class="column">
+      <img src= "jurnalul.jpg" alt="Snow" style="width:300px;height:150px; object-fit: cover;">
+    </div>
+    <div class="column">
+      <img src="virginriver.jpg" alt="Forest" style="width:300px;height:150px; object-fit: cover;">
+    </div>
+    <div class="row">
+      <div class="column">
+        <p>Vrei sa vezi un film romantic? Atunci <b>The Notebook</b> este pentru tine, un film clasic, romantic dar si dramatic 
+          care cu siguranta o sa iti ajunga la inima!Click pe imagine pentru a urmarii povestea lui Allie Hamilton și Noah Calhoun. </p>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<!-- <p>Vrei sa vezi un film romantic? Atunci <b>The Notebook</b> este pentru tine, un film clasic, romantic dar si dramatic care cu siguranta o sa iti ajunga la inima!Click pe imagine pentru a urmarii povestea lui Allie Hamilton și Noah Calhoun. </p>
+
+<a href="filme.html"><img src="jurnalul.jpg" alt="poza" border="1" style="width:500px;height:250px; object-fit: cover;"></a>
+<p>Ai putin timp la dispozitie? Iti recomandam serialul <b>Virgin River</b> care prezinta povestea povestea de dragoste a unei noi infirmiere venite in oras si a unui burlac care nu vrea sa fie intr-o relatie! </p>
+
+
+<a href="seriale.html"><img src="virginriver.jpg" alt="poza" border="1" style="width:500px;height:250px; object-fit: cover;"></a> -->
+</body>
+</html>
