@@ -1,17 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Sign In</title>
+<title>Movie Rental</title>
 </head>
-<body style="background-color:#000543;">
+<body style="background-color:powderblue; font-family: sans-serif;">
 
 <style>
+  * {
+     box-sizing: border-box;
+  }
+     body, html {
+    top: 0;
+     margin: 0;
+     padding: 0;
+     border: 0;
+  }
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
   background-color: #333;
+  margin-top: 0;
 }
 
 li {
@@ -34,12 +44,12 @@ li a:hover {
 <body>
 
 <ul>
-<li><a href="#Kidzone">Kid Zone</a></li>
-  <li><a href="#Whishlist">Wishlist</a></li>  
+<li><a href="kidzone.html">Kid Zone</a></li>
+  <li><a href="wishlist.html">Wishlist</a></li>  
 <li><a href="filme.html">Filme</a></li>
   <li><a href="seriale.html">Seriale</a></li>
-  <li><a href="index.html">Home</a></li>
- <li><a href="signin.html">Sign In</a></li>
+  <li><a href="index.html">Pagina principală</a></li>
+ <li><a href="signin.html">Log In</a></li>
 </ul>
 
 
@@ -87,8 +97,8 @@ button:hover {
 }
 
 img.avatar {
-  width: 40%;
-  border-radius: 50%;
+  width: 20%;
+  border-radius: 30%;
 }
 
 .container {
@@ -104,14 +114,14 @@ span.psw {
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  z-index: 1; /*Sit on top*/
   left: 0;
   top: 0;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  background-color: rgba(0,0,0,0.4); /*Black w/ opacity  */
   padding-top: 60px;
 }
 
@@ -259,8 +269,14 @@ button:hover {
 }
 
 /* Float cancel and signup buttons and add an equal width */
-.cancelbtn, .signupbtn {
-  float: left;
+.cancelbtn {
+  /* float: left; */
+  justify-items: center;
+  width: 50%;
+}
+
+.signupbtn {
+  float: right;
   width: 50%;
 }
 

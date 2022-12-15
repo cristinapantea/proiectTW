@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <head>
 <title>Movie Rental</title>
@@ -31,14 +31,85 @@ li a:hover {
 }
 </style>
 <body>
+  <script>
+    document.getElementById("filme").onclick = function () {
+        location.href = "www.yoursite.com";
+    };
+    function filme() {
+      router.get("/", (req, res) => {
+    res.render("filme");
+  });
+    }
+  </script>
+
 
 <ul>
 <li><a href="#Kidzone">Kid Zone</a></li>
   <li><a href="#Whishlist">Wishlist</a></li>  
-<li><a href="filme.html">Filme</a></li>
+<li><button id="filme">Filme</button></li>
   <li><a href="seriale.html">Seriale</a></li>
   <li><a href="index.html">Home</a></li>
  <li><a href="signin.html">Sign In</a></li>
+</ul>
+
+
+
+<h1>This is a Heading</h1>
+<p>This is a paragraph.</p>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Movie Rental</title>
+</head>
+<body style="background-color:powderblue; font-family: sans-serif;">
+
+<style>
+     * {
+     box-sizing: border-box;
+  }
+     body, html {
+    top: 0;
+     margin: 0;
+     padding: 0;
+     border: 0;
+  }
+ul {
+
+  list-style-type: none;
+  margin: 0 px;
+  margin-top: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: right;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+</style>
+<body>
+
+<ul>
+<li><a href="kidzone.html">Kid Zone</a></li>
+  <li><a href="wishlist.html">Wishlist</a></li>  
+<li><a href="filme.html">Filme</a></li>
+  <li><a href="seriale.html">Seriale</a></li>
+  <li><a href="index.html">Pagina principală</a></li>
+ <li><a href="signin.html">Log In</a></li>
 </ul>
 
 

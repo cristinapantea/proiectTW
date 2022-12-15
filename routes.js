@@ -7,5 +7,7 @@ router.get("/", function(req, res) {
     // console.log("hello I'm on the start page");
 res.render("index");
 });
-
+// router.get("/", (req, res) => {
+//     res.render("filme");
+//   });
 module.exports = router;
